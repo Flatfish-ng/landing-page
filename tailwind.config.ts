@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				// FlatFish brand colors
+				flatfish: {
+					brown: {
+						dark: 'hsl(var(--flatfish-brown-dark))',
+						medium: 'hsl(var(--flatfish-brown-medium))',
+						light: 'hsl(var(--flatfish-brown-light))'
+					},
+					yellow: {
+						bright: 'hsl(var(--flatfish-yellow-bright))',
+						warm: 'hsl(var(--flatfish-yellow-warm))',
+						soft: 'hsl(var(--flatfish-yellow-soft))'
+					},
+					cream: 'hsl(var(--flatfish-cream))'
 				}
 			},
 			borderRadius: {
@@ -89,6 +94,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
 			}
 		}
 	},
