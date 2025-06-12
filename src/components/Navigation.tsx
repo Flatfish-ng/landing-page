@@ -14,14 +14,14 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-flatfish-yellow-warm shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed w-screen top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-flatfish-yellow-warm shadow-sm">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img 
-              src="/lovable-uploads/bda5bb4a-6e03-44e4-84aa-773c76ea49c0.png" 
-              alt="FlatFish Foods" 
+            <img
+              src="/images/logo-4.png"
+              alt="FlatFish Foods"
               className="h-8 w-auto"
             />
           </div>
@@ -76,7 +76,7 @@ const Navigation = () => {
         </div>
       )}
     </nav>
-  );
+  )
 };
 
 export default Navigation;

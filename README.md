@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# Flatfish - Delectable Chin Chin Website
 
-## Project info
+A warm, mobile-friendly website for Flatfish Foods, showcasing their homemade chin chin products.
 
-**URL**: https://lovable.dev/projects/c2d15c7a-af41-43da-95db-99b33736e69e
+## Features
 
-## How can I edit this code?
+- 🏠 **Home Section** - Hero section with brand messaging
+- 📖 **About Us** - Story and values of Flatfish Foods
+- 📦 **Products** - Showcase of chin chin packs (100g to 2kg+)
+- 📱 **WhatsApp Integration** - Direct ordering via WhatsApp with pre-filled messages
+- 📞 **Contact** - Multiple contact methods and contact form
+- 📱 **Mobile-First** - Optimized for mobile devices
+- 🎨 **Warm Design** - Cozy, friendly aesthetic with orange/amber color scheme
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS v4
+- **Language**: TypeScript
+- **Deployment**: Ready for Vercel, Netlify, or any static hosting
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c2d15c7a-af41-43da-95db-99b33736e69e) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-**Use your preferred IDE**
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Product Packs
 
-Follow these steps:
+- **100g Pack** - A Taste of Home in Your Pocket
+- **250g Pack** - Your Midweek Pick-Me-Up
+- **500g Pack** - The Sharing Pack
+- **1kg Pack** - Your Party Starter
+- **2kg+ Pack** - The More, The Merrier
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Contact Information
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **WhatsApp**: +234 707 406 3047
+- **Phone**: +234 707 406 3047
+- **Instagram**: @flatfish.ng
+- **TikTok**: @flatfish.ng
+- **Facebook**: @flatfish.ng
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Customization
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+To add product images, place them in the `public/images/` directory with the following naming convention:
+- `100g-pack.jpg`
+- `250g-pack.jpg`
+- `500g-pack.jpg`
+- `1kg-pack.jpg`
+- `2kg-pack.jpg`
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The website is ready for deployment on:
+- Vercel (recommended)
+- Netlify
+- Any static hosting service
 
-**Use GitHub Codespaces**
+## License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c2d15c7a-af41-43da-95db-99b33736e69e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2024 Flatfish Foods. Made with ❤️ in Nigeria.

@@ -1,35 +1,38 @@
-
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { toast } from 'sonner';
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+// import { toast } from "sonner"
+import { Facebook, Instagram, Music2 } from "lucide-react"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    message: ''
-  });
+    name: "",
+    phone: "",
+    message: "",
+  })
 
+  const handleWhatsApp = (message: string) => {
+    window.open(
+      `https://wa.me/2347074063047?text=${encodeURIComponent(message)}`,
+      "_blank"
+    )
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({ name: '', phone: '', message: '' });
-  };
+    e.preventDefault()
+    // toast.success("Thank you for your message! We'll get back to you soon.")
+    // setFormData({ name: "", phone: "", message: "" })
+  }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleWhatsApp = () => {
-    const message = encodeURIComponent("Hi FlatFish! I'd like to know more about your delectable chin chin. Can you help me?");
-    window.open(`https://wa.me/2347074063047?text=${message}`, '_blank');
-  };
+      [e.target.name]: e.target.value,
+    })
+  }
 
   return (
     <section id="contact" className="py-20 bg-flatfish-cream">
@@ -58,16 +61,24 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-flatfish-yellow-warm/10 rounded-lg">
-                  <span className="text-flatfish-brown-dark font-medium">WhatsApp</span>
-                  <Button 
-                    onClick={handleWhatsApp}
+                  <span className="text-flatfish-brown-dark font-medium">
+                    WhatsApp
+                  </span>
+                  <Button
+                    onClick={() =>
+                      handleWhatsApp(
+                        "Hi FlatFish! I'd like to know more about your delectable chin chin. Can you help me?"
+                      )
+                    }
                     className="bg-flatfish-brown-medium hover:bg-flatfish-brown-dark text-white"
                   >
                     Chat Now
                   </Button>
                 </div>
                 <div className="text-center text-flatfish-brown-light">
-                  <p>Phone: +2347074063047</p>
+                  <a href="tel:+2349011288423" target="_blank">
+                    Phone: +2349011288423
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -82,32 +93,44 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-3 gap-4">
-                  <a 
-                    href="https://instagram.com/flatfish.ng" 
-                    target="_blank" 
+                  <a
+                    href="https://instagram.com/flatfish.ng"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center p-4 bg-flatfish-yellow-warm/10 rounded-lg hover:bg-flatfish-yellow-warm/20 transition-colors"
                   >
-                    <span className="text-2xl mb-2">📷</span>
-                    <span className="text-sm text-flatfish-brown-dark font-medium">Instagram</span>
+                    <span className="text-2xl mb-2">
+                      <Instagram />
+                    </span>
+                    <span className="text-sm text-flatfish-brown-dark font-[700]">
+                      Instagram
+                    </span>
                   </a>
-                  <a 
-                    href="https://tiktok.com/@flatfish.ng" 
-                    target="_blank" 
+                  <a
+                    href="https://tiktok.com/@flatfish.ng"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center p-4 bg-flatfish-yellow-warm/10 rounded-lg hover:bg-flatfish-yellow-warm/20 transition-colors"
                   >
-                    <span className="text-2xl mb-2">🎵</span>
-                    <span className="text-sm text-flatfish-brown-dark font-medium">TikTok</span>
+                    <span className="text-2xl mb-2">
+                      <Music2 />
+                    </span>
+                    <span className="text-sm text-flatfish-brown-dark font-[700]">
+                      TikTok
+                    </span>
                   </a>
-                  <a 
-                    href="https://facebook.com/flatfish.ng" 
-                    target="_blank" 
+                  <a
+                    href="https://facebook.com/flatfish.ng"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center p-4 bg-flatfish-yellow-warm/10 rounded-lg hover:bg-flatfish-yellow-warm/20 transition-colors"
                   >
-                    <span className="text-2xl mb-2">👥</span>
-                    <span className="text-sm text-flatfish-brown-dark font-medium">Facebook</span>
+                    <span className="text-2xl mb-2">
+                      <Facebook />
+                    </span>
+                    <span className="text-sm text-flatfish-brown-dark font-[700]">
+                      Facebook
+                    </span>
                   </a>
                 </div>
               </CardContent>
@@ -123,9 +146,18 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                className="space-y-6"
+              >
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-flatfish-brown-dark mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-flatfish-brown-dark mb-2"
+                  >
                     Your Name
                   </label>
                   <Input
@@ -141,7 +173,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-flatfish-brown-dark mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-flatfish-brown-dark mb-2"
+                  >
                     Phone Number
                   </label>
                   <Input
@@ -157,7 +192,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-flatfish-brown-dark mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-flatfish-brown-dark mb-2"
+                  >
                     Message
                   </label>
                   <Textarea
@@ -172,7 +210,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-flatfish-brown-medium hover:bg-flatfish-brown-dark text-white font-semibold py-3 rounded-xl transition-all duration-200"
                 >
@@ -184,7 +222,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

@@ -5,51 +5,56 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const Products = () => {
   const products = [
     {
-      id: '100g',
-      name: '100g Pack',
-      subtitle: 'A Taste of Home in Your Pocket',
-      description: 'Small but mighty! Great for snacking on the go.',
-      image: '/lovable-uploads/8fed4726-cc75-4300-991b-d4d1040d6ed0.png',
-      whatsappMessage: "Hi Flatfish! I'd love to order the 100g pack of your delectable chin chin. Is it available?",
-      color: 'bg-flatfish-yellow-bright'
+      id: "100g",
+      name: "100g Pack",
+      subtitle: "A Taste of Home in Your Pocket",
+      description: "Small but mighty! Great for snacking on the go.",
+      image: "/images/logo-1.png",
+      whatsappMessage:
+        "Hi Flatfish! I'd love to order the 100g pack of your delectable chin chin. Is it available?",
+      color: "bg-flatfish-yellow-bright",
     },
     {
-      id: '250g',
-      name: '250g Pack',
-      subtitle: 'Your Midweek Pick-Me-Up',
-      description: 'Desk, bag, or bedside—always close.',
-      image: '/lovable-uploads/741a3a64-ae89-4e10-97d7-b470a786865d.png',
-      whatsappMessage: "Hi Flatfish! I'm interested in the 250g pack of your chin chin. Please share the price and how to get it.",
-      color: 'bg-flatfish-brown-medium'
+      id: "250g",
+      name: "250g Pack",
+      subtitle: "Your Midweek Pick-Me-Up",
+      description: "Desk, bag, or bedside—always close.",
+      image: "/images/logo-3.png",
+      whatsappMessage:
+        "Hi Flatfish! I'm interested in the 250g pack of your chin chin. Please share the price and how to get it.",
+      color: "bg-flatfish-brown-medium",
     },
     {
-      id: '500g',
-      name: '500g Pack',
-      subtitle: 'The Sharing Pack',
-      description: 'Perfect for couples, roommates, and generous snackers.',
-      image: '/lovable-uploads/8fed4726-cc75-4300-991b-d4d1040d6ed0.png',
-      whatsappMessage: "Hi Flatfish! I'd like to order the 500g pack of your delectable chin chin. How do I proceed?",
-      color: 'bg-flatfish-yellow-warm'
+      id: "500g",
+      name: "500g Pack",
+      subtitle: "The Sharing Pack",
+      description: "Perfect for couples, roommates, and generous snackers.",
+      image: "/images/logo-1.png",
+      whatsappMessage:
+        "Hi Flatfish! I'd like to order the 500g pack of your delectable chin chin. How do I proceed?",
+      color: "bg-flatfish-yellow-warm",
     },
     {
-      id: '1kg',
-      name: '1kg Pack',
-      subtitle: 'Your Party Starter',
-      description: 'Movie night? Guests? Sorted.',
-      image: '/lovable-uploads/741a3a64-ae89-4e10-97d7-b470a786865d.png',
-      whatsappMessage: "Hi Flatfish! I'm ready to order the 1kg chin chin pack. Please send me the details. Thanks!",
-      color: 'bg-flatfish-brown-light'
+      id: "1kg",
+      name: "1kg Pack",
+      subtitle: "Your Party Starter",
+      description: "Movie night? Guests? Sorted.",
+      image: "/images/logo-3.png",
+      whatsappMessage:
+        "Hi Flatfish! I'm ready to order the 1kg chin chin pack. Please send me the details. Thanks!",
+      color: "bg-flatfish-brown-light",
     },
     {
-      id: '2kg',
-      name: '2kg+ Pack',
-      subtitle: 'The More, The Merrier',
-      description: 'For events, gifting, or serious cravings.',
-      image: '/lovable-uploads/8fed4726-cc75-4300-991b-d4d1040d6ed0.png',
-      whatsappMessage: "Hi Flatfish! I'm interested in placing a bulk order (2kg or more) of your delectable chin chin. Please let me know pricing and delivery options.",
-      color: 'bg-flatfish-yellow-soft'
-    }
-  ];
+      id: "2kg",
+      name: "2kg+ Pack",
+      subtitle: "The More, The Merrier",
+      description: "For events, gifting, or serious cravings.",
+      image: "/images/logo-1.png",
+      whatsappMessage:
+        "Hi Flatfish! I'm interested in placing a bulk order (2kg or more) of your delectable chin chin. Please let me know pricing and delivery options.",
+      color: "bg-flatfish-yellow-soft",
+    },
+  ]
 
   const handleWhatsAppOrder = (message: string) => {
     const encodedMessage = encodeURIComponent(message);
