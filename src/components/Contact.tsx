@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -19,11 +19,27 @@ const Contact = () => {
       "_blank"
     )
   }
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   // e.preventDefault()
-  //   toast.success("Thank you for your message! We'll get back to you soon.")
-  //   setFormData({ name: "", phone: "", message: "" })
-  // }
+  const handleSubmit = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault()
+      toast.success("Thank you for your message! We'll get back to you soon.")
+      const data = new FormData(formData)
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      })
+        .then(() => {
+          console.log("/thank-you/")
+        })
+        .catch((error) => {
+          alert(error)
+        })
+      setFormData({ name: "", phone: "", message: "" })
+    },
+    [formData]
+  )
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -147,9 +163,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form
-                // onSubmit={handleSubmit}
+                onSubmit={handleSubmit}
                 name="contact"
-                method="POST"
+                // method="POST"
                 data-netlify="true"
                 className="space-y-6"
               >
