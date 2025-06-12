@@ -15,7 +15,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-flatfish-brown-light leading-relaxed">
               <p>
-                FlatFish was born out of a deep passion for baking and cooking — a passion I inherited from my mother. What began as a small venture selling homemade chin chin to classmates has grown into FlatFish Foods, a brand committed to sharing premium, homemade goodness with everyone.
+                Flatfish was born out of a deep passion for baking and cooking — a passion I inherited from my mother. What began as a small venture selling homemade chin chin to classmates has grown into Flatfish Foods, a brand committed to sharing premium, homemade goodness with everyone.
               </p>
               
               <p>

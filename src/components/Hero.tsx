@@ -13,12 +13,9 @@ const Hero = () => {
         <div className="text-center lg:text-left space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold text-flatfish-brown-dark leading-tight">
-              Premium, homemade chin chin made with{' '}
-              <span className="text-flatfish-brown-medium">love</span>
+              Premium, homemade chin chin made with love — wherever you are.{' '}
+              <span className="text-flatfish-brown-medium">Flatfish brings you a taste of home, without lifting a finger.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-flatfish-brown-light leading-relaxed">
-              Wherever you are, FlatFish brings you a taste of home, without lifting a finger.
-            </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
