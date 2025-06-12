@@ -7,12 +7,6 @@ import { toast } from "sonner"
 import { Facebook, Instagram, Music2 } from "lucide-react"
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    message: "",
-  })
-
   const handleWhatsApp = (message: string) => {
     window.open(
       `https://wa.me/2347074063047?text=${encodeURIComponent(message)}`,
@@ -22,16 +16,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     // e.preventDefault()
     toast.success("Thank you for your message! We'll get back to you soon.")
-    setFormData({ name: "", phone: "", message: "" })
-  }
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
   }
 
   return (
@@ -164,8 +148,6 @@ const Contact = () => {
                     id="name"
                     name="name"
                     type="text"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="border-flatfish-yellow-warm/50 focus:border-flatfish-brown-medium"
                     placeholder="Enter your name"
@@ -183,8 +165,6 @@ const Contact = () => {
                     id="phone"
                     name="phone"
                     type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
                     required
                     className="border-flatfish-yellow-warm/50 focus:border-flatfish-brown-medium"
                     placeholder="Enter your phone number"
@@ -201,8 +181,6 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={4}
                     className="border-flatfish-yellow-warm/50 focus:border-flatfish-brown-medium"
