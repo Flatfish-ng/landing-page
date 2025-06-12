@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-// import { toast } from "sonner"
+import { toast } from "sonner"
 import { Facebook, Instagram, Music2 } from "lucide-react"
 
 const Contact = () => {
@@ -21,8 +21,8 @@ const Contact = () => {
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // toast.success("Thank you for your message! We'll get back to you soon.")
-    // setFormData({ name: "", phone: "", message: "" })
+    toast.success("Thank you for your message! We'll get back to you soon.")
+    setFormData({ name: "", phone: "", message: "" })
   }
 
   const handleChange = (
