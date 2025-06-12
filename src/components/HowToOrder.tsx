@@ -48,7 +48,7 @@ const HowToOrder = () => {
                 <div className="w-20 h-20 bg-flatfish-yellow-warm rounded-full mx-auto flex items-center justify-center text-3xl group-hover:bg-flatfish-yellow-soft transition-colors duration-300">
                   {step.icon}
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-flatfish-brown-medium text-white rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="absolute -top-2 -left-2 w-8 h-8 bg-flatfish-brown-medium text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {step.number}
                 </div>
               </div>
