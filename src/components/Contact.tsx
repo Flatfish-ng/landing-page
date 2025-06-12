@@ -19,11 +19,11 @@ const Contact = () => {
       "_blank"
     )
   }
-  const handleSubmit = (e: React.FormEvent) => {
-    // e.preventDefault()
-    toast.success("Thank you for your message! We'll get back to you soon.")
-    setFormData({ name: "", phone: "", message: "" })
-  }
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   // e.preventDefault()
+  //   toast.success("Thank you for your message! We'll get back to you soon.")
+  //   setFormData({ name: "", phone: "", message: "" })
+  // }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -147,7 +147,7 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form
-                onSubmit={handleSubmit}
+                // onSubmit={handleSubmit}
                 name="contact"
                 method="POST"
                 data-netlify="true"
