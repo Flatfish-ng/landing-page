@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -7,7 +7,11 @@ import { toast } from "sonner"
 import { Facebook, Instagram, Music2 } from "lucide-react"
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement | null>(null)
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  })
 
   const handleWhatsApp = (message: string) => {
     window.open(
@@ -15,26 +19,20 @@ const Contact = () => {
       "_blank"
     )
   }
-  const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
-      e.preventDefault()
-      toast.success("Thank you for your message! We'll get back to you soon.")
-      const data = new FormData(formRef.current)
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    toast.success("Thank you for your message! We'll get back to you soon.")
+    setFormData({ name: "", phone: "", message: "" })
+  }
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data).toString(),
-      })
-        .then(() => {
-          console.log("/thank-you/")
-        })
-        .catch((error) => {
-          alert(error)
-        })
-    },
-    [formRef.current]
-  )
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
 
   return (
     <section id="contact" className="py-20 bg-flatfish-cream">
@@ -149,10 +147,9 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form
-                ref={formRef}
                 onSubmit={handleSubmit}
                 name="contact"
-                // method="POST"
+                method="POST"
                 data-netlify="true"
                 className="space-y-6"
               >
@@ -167,6 +164,8 @@ const Contact = () => {
                     id="name"
                     name="name"
                     type="text"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="border-flatfish-yellow-warm/50 focus:border-flatfish-brown-medium"
                     placeholder="Enter your name"
@@ -184,6 +183,8 @@ const Contact = () => {
                     id="phone"
                     name="phone"
                     type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
                     required
                     className="border-flatfish-yellow-warm/50 focus:border-flatfish-brown-medium"
                     placeholder="Enter your phone number"
@@ -200,11 +201,14 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     rows={4}
                     className="border-flatfish-yellow-warm/50 focus:border-flatfish-brown-medium"
                     placeholder="Tell us how we can help you..."
                   />
+                  <input type="hidden" name="form-name" value="contact" />
                 </div>
 
                 <Button
