@@ -7,39 +7,43 @@ const Products = () => {
     {
       id: "100g",
       name: "100g Pack",
-      subtitle: "A Taste of Home in Your Pocket",
-      description: "Small but mighty! Great for snacking on the go.",
-      image: "/images/logo-1.png",
+      subtitle: "A Gentle First Bite",
+      description:
+        "Perfectly portioned for solo snacking or sharing a taste of Flatfish joy.",
+      image: "/images/100g.jpeg",
       whatsappMessage:
-        "Hi Flatfish! I'd love to order the 100g pack of your delectable chin chin. Is it available?",
+        "Hi Flatfish! I'd love to order the 100g pack of your premium chin chin. Is it available?",
       color: "bg-flatfish-yellow-bright",
-    },
-    {
-      id: "250g",
-      name: "250g Pack",
-      subtitle: "Your Midweek Pick-Me-Up",
-      description: "Desk, bag, or bedside—always close.",
-      image: "/images/logo-3.png",
-      whatsappMessage:
-        "Hi Flatfish! I'm interested in the 250g pack of your chin chin. Please share the price and how to get it.",
-      color: "bg-flatfish-brown-medium",
     },
     {
       id: "500g",
       name: "500g Pack",
-      subtitle: "The Sharing Pack",
-      description: "Perfect for couples, roommates, and generous snackers.",
-      image: "/images/logo-1.png",
+      subtitle: "Moments Made Sweeter",
+      description:
+        "Great for sharing — at home, work, or your next small get-together.",
+      image: "/images/500g.jpeg",
       whatsappMessage:
-        "Hi Flatfish! I'd like to order the 500g pack of your delectable chin chin. How do I proceed?",
+        "Hi Flatfish! I'd like to order the 500g pack of your delicious chin chin. How do I proceed?",
       color: "bg-flatfish-yellow-warm",
+    },
+    {
+      id: "750g",
+      name: "750g Pack",
+      subtitle: "Not Too Little, Not Too Much",
+      description:
+        "Perfect balance for those who snack with intention — or share with love.",
+      image: "/images/750g.jpeg",
+      whatsappMessage:
+        "Hi Flatfish! I'm interested in the 750g pack of your chin chin. Please send me the details.",
+      color: "bg-flatfish-brown-medium",
     },
     {
       id: "1kg",
       name: "1kg Pack",
-      subtitle: "Your Party Starter",
-      description: "Movie night? Guests? Sorted.",
-      image: "/images/logo-3.png",
+      subtitle: "For Life's Small Gatherings",
+      description:
+        "Whether it's hosting, celebrating, or stocking up — this pack covers it.",
+      image: "/images/1kg.jpeg",
       whatsappMessage:
         "Hi Flatfish! I'm ready to order the 1kg chin chin pack. Please send me the details. Thanks!",
       color: "bg-flatfish-brown-light",
@@ -48,13 +52,15 @@ const Products = () => {
       id: "2kg",
       name: "2kg+ Pack",
       subtitle: "The More, The Merrier",
-      description: "For events, gifting, or serious cravings.",
-      image: "/images/logo-1.png",
+      description:
+        "For events, gifting, or serious cravings. Quality never looked this generous.",
+      image: "/images/demo.jpeg",
       whatsappMessage:
-        "Hi Flatfish! I'm interested in placing a bulk order (2kg or more) of your delectable chin chin. Please let me know pricing and delivery options.",
+        "Hi Flatfish! I'm interested in placing a bulk order (2kg or more) of your premium chin chin. Please let me know pricing and delivery options.",
       color: "bg-flatfish-yellow-soft",
     },
   ]
+  
 
   const handleWhatsAppOrder = (message: string) => {
     const encodedMessage = encodeURIComponent(message);
@@ -72,41 +78,46 @@ const Products = () => {
           </h2>
           <div className="w-20 h-1 bg-flatfish-yellow-warm rounded-full mx-auto"></div>
           <p className="text-xl text-flatfish-brown-light max-w-2xl mx-auto">
-            From quick snacks to party favorites, we have the perfect size for every craving
+            From quick snacks to party favorites, we have the perfect size for
+            every craving
           </p>
         </div>
 
         {/* Products Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <Card 
-              key={product.id} 
+            <Card
+              key={product.id}
               className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border-2 border-flatfish-yellow-warm/20"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardHeader className={`${product.color} text-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10"></div>
+              <CardHeader
+                className={`${product.color} space-y-0 p-0 m-0 text-center relative overflow-hidden`}
+              >
+                <div className="absolute z-[11] inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
                 <div className="relative z-10 flex justify-center mb-4">
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     alt={product.name}
-                    className="w-24 h-24 object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
+                    className="w-full object-cover drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <CardTitle className="text-flatfish-brown-dark text-xl font-bold">
-                  {product.name}
-                </CardTitle>
-                <CardDescription className="text-flatfish-brown-medium font-medium">
-                  {product.subtitle}
-                </CardDescription>
+                <div className="absolute bottom-[10px] z-[12] inset-x-0">
+                  <CardTitle className=" text-flatfish-cream text-xl font-bold">
+                    {product.name}
+                  </CardTitle>
+                  <CardDescription className="text-flatfish-cream font-medium">
+                    {product.subtitle}
+                  </CardDescription>
+                </div>
               </CardHeader>
-              
+
               <CardContent className="p-6 bg-white">
                 <p className="text-flatfish-brown-light mb-6 text-center">
                   {product.description}
                 </p>
-                
-                <Button 
+
+                <Button
                   onClick={() => handleWhatsAppOrder(product.whatsappMessage)}
                   className="w-full bg-flatfish-brown-medium hover:bg-flatfish-brown-dark text-white font-semibold py-3 rounded-xl transition-all duration-200 transform hover:scale-105"
                 >
@@ -118,7 +129,7 @@ const Products = () => {
         </div>
       </div>
     </section>
-  );
+  )
 };
 
 export default Products;

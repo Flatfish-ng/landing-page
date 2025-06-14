@@ -8,17 +8,19 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-gradient-to-br from-flatfish-cream via-white to-flatfish-yellow-soft flex items-center justify-center px-4 pt-16"
+      className="min-h-[80dvh] bg-gradient-to-b from-flatfish-cream via-white to-flatfish-yellow-warm flex items-center justify-center px-4 relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center py-16">
+      <div className="hero-bg absolute top-[20%] md:top-0 w-full h-full z-0"></div>
+      <div className="max-w-6xl mx-auto md:mr-auto md:ml-0 items-center relative z-1">
         {/* Content */}
-        <div className="text-center lg:text-left space-y-8">
+        <div className="text-center lg:text-left space-y-8 mx-auto max-w-[85%] lg:max-w-[70%]">
           <div className="space-y-4">
             <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-flatfish-brown-dark leading-tight">
-              Premium, homemade chin chin made with love — wherever you are.
+              Premium, Luxury Chin Chin, Elevated.
             </h1>
             <p className="text-flatfish-brown-medium text-lg md:text-xl xl:text-3xl">
-              Flatfish brings you a taste of home, without lifting a finger.
+              We only serve what we&apos;re proud of — indulgent chin chin crafted
+              with care and packaged with purpose.
             </p>
           </div>
 
