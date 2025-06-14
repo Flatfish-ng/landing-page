@@ -59,10 +59,10 @@ const About = () => {
                   <span className="text-2xl">🏠</span>
                 </div>
                 <h3 className="font-semibold text-flatfish-brown-dark mb-2">
-                  Homemade
+                  Thoughtfully Made
                 </h3>
                 <p className="text-sm text-flatfish-brown-light">
-                  Made with love and premium ingredients
+                  Made the way you'd make it for yourself—no shortcuts.
                 </p>
               </div>
 
@@ -74,7 +74,7 @@ const About = () => {
                   Natural
                 </h3>
                 <p className="text-sm text-flatfish-brown-light">
-                  No preservatives, just pure goodness
+                  No preservatives. Just premium ingredients and real flavor.
                 </p>
               </div>
 
@@ -86,7 +86,7 @@ const About = () => {
                   Love
                 </h3>
                 <p className="text-sm text-flatfish-brown-light">
-                  Crafted with care and passion
+                  Every batch is crafted with care, precision, and passion.
                 </p>
               </div>
             </div>
