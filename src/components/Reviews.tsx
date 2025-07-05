@@ -176,9 +176,9 @@ const Reviews = () => {
             isVisible ? "opacity-100" : "opacity-0"
           } transition-opacity duration-1000`}
         >
-          <ScrollingLine reviewersArray={line1} direction="left" speed="40s" />
-          <ScrollingLine reviewersArray={line2} direction="right" speed="35s" />
-          <ScrollingLine reviewersArray={line3} direction="left" speed="45s" />
+          <ScrollingLine reviewersArray={line1} direction="left" speed="10s" />
+          <ScrollingLine reviewersArray={line2} direction="right" speed="5s" />
+          <ScrollingLine reviewersArray={line3} direction="left" speed="15s" />
         </div>
       </div>
     </section>
