@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
-const Testimonials = () => {
+const Reviews = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   const reviewers = [
@@ -185,7 +185,7 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default Reviews
 
 interface ReviewBadgeProps {
   name: string

@@ -5,7 +5,7 @@ import Products from "@/components/Products"
 import HowToOrder from "@/components/HowToOrder"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
-import Testimonials from "@/components/Testimonials"
+import Reviews from "@/components/Reviews"
 
 const Index = () => {
   return (
@@ -15,7 +15,7 @@ const Index = () => {
       <Products />
       <About />
       <HowToOrder />
-      <Testimonials />
+      <Reviews />
       <Contact />
       <Footer />
     </div>
